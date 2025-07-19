@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Assistente de Meta</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+  <link rel="icon" href="./assets/favicon.ico" type="image/x-icon" />
+  <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+  <header>
+    <img src="./assets/logo.png" alt="Logo Esports NLW">
+  </header>
+
+  <main>
+    <section>
+      <div>
+        <h2>Assistente de Meta</h2>
+        <p>Pergunte sobre estratégias, build e dicas para seus jogos!</p>
+
+        <form id="form">
+          <!-- Instruções para obter a API Key -->
+          <p style="font-size: 0.9rem; margin-bottom: 0.5rem;">
+            🔑 <strong>Para usar o assistente:</strong><br>
+            1. Acesse <a href="https://aistudio.google.com/app/apikey" target="_blank">aistudio.google.com/app/apikey</a><br>
+            2. Faça login com sua conta Google<br>
+            3. Copie sua API KEY e cole abaixo
+          </p>
+
+          <input id="apiKey" type="password" placeholder="Informe a API KEY do Gemini" required>
+
+          <select id="gameSelect">
+            <option value="">Selecione o jogo</option>
+            <option value="tibia">Tibia</option>
+            <option value="pxg">Pokémon PXG</option>
+            <option value="btd6">Bloons TD 6</option>
+          </select>
+
+          <input id="questionInput" type="text" placeholder="Ex: Melhor build para..." required>
+
+          <button id="askButton">Perguntar</button>
+        </form>
+
+        <div id="aiResponse" class="hidden">
+          <div class="response-content"></div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <script src="https://unpkg.com/showdown/dist/showdown.min.js"></script>
+  <script src="./script.js"></script>
+</body>
+</html>
